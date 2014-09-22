@@ -53,14 +53,14 @@
 			this.label3 = new System.Windows.Forms.Label();
 			this.label4 = new System.Windows.Forms.Label();
 			this.FCFS = new System.Windows.Forms.Button();
-			this.RoundRobin = new System.Windows.Forms.Button();
-			this.ShortestJobFirst = new System.Windows.Forms.Button();
 			this.PriorityPlaninig = new System.Windows.Forms.Button();
-			this.ShortestRemainingTime = new System.Windows.Forms.Button();
-			this.HRRN = new System.Windows.Forms.Button();
 			this.debug = new System.Windows.Forms.Label();
 			this.Diagramm = new System.Windows.Forms.PictureBox();
 			this.Alghoritms = new System.Windows.Forms.Panel();
+			this.HRRN = new System.Windows.Forms.Button();
+			this.ShortestRemainingTime = new System.Windows.Forms.Button();
+			this.RoundRobin = new System.Windows.Forms.Button();
+			this.ShortestJobFirst = new System.Windows.Forms.Button();
 			this.InputData.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.Diagramm)).BeginInit();
 			this.Alghoritms.SuspendLayout();
@@ -420,24 +420,6 @@
 			this.FCFS.UseVisualStyleBackColor = true;
 			this.FCFS.Click += new System.EventHandler(this.FCFS_Click);
 			// 
-			// RoundRobin
-			// 
-			this.RoundRobin.Location = new System.Drawing.Point(0, 42);
-			this.RoundRobin.Name = "RoundRobin";
-			this.RoundRobin.Size = new System.Drawing.Size(141, 36);
-			this.RoundRobin.TabIndex = 1;
-			this.RoundRobin.Text = "Round Robin";
-			this.RoundRobin.UseVisualStyleBackColor = true;
-			// 
-			// ShortestJobFirst
-			// 
-			this.ShortestJobFirst.Location = new System.Drawing.Point(147, 0);
-			this.ShortestJobFirst.Name = "ShortestJobFirst";
-			this.ShortestJobFirst.Size = new System.Drawing.Size(141, 36);
-			this.ShortestJobFirst.TabIndex = 1;
-			this.ShortestJobFirst.Text = "Shortest Job First";
-			this.ShortestJobFirst.UseVisualStyleBackColor = true;
-			// 
 			// PriorityPlaninig
 			// 
 			this.PriorityPlaninig.Location = new System.Drawing.Point(295, 0);
@@ -447,25 +429,6 @@
 			this.PriorityPlaninig.Text = "Приоритетное планирование";
 			this.PriorityPlaninig.UseVisualStyleBackColor = true;
 			this.PriorityPlaninig.Click += new System.EventHandler(this.PriorityPlaninig_Click);
-			// 
-			// ShortestRemainingTime
-			// 
-			this.ShortestRemainingTime.Location = new System.Drawing.Point(147, 42);
-			this.ShortestRemainingTime.Name = "ShortestRemainingTime";
-			this.ShortestRemainingTime.Size = new System.Drawing.Size(141, 36);
-			this.ShortestRemainingTime.TabIndex = 1;
-			this.ShortestRemainingTime.Text = "Shortest remaining time";
-			this.ShortestRemainingTime.UseVisualStyleBackColor = true;
-			// 
-			// HRRN
-			// 
-			this.HRRN.Location = new System.Drawing.Point(295, 42);
-			this.HRRN.Name = "HRRN";
-			this.HRRN.Size = new System.Drawing.Size(141, 36);
-			this.HRRN.TabIndex = 1;
-			this.HRRN.Text = "HRRN";
-			this.HRRN.UseVisualStyleBackColor = true;
-			this.HRRN.Click += new System.EventHandler(this.HRRN_Click);
 			// 
 			// debug
 			// 
@@ -500,13 +463,50 @@
 			this.Alghoritms.Size = new System.Drawing.Size(436, 78);
 			this.Alghoritms.TabIndex = 4;
 			// 
+			// HRRN
+			// 
+			this.HRRN.Location = new System.Drawing.Point(295, 42);
+			this.HRRN.Name = "HRRN";
+			this.HRRN.Size = new System.Drawing.Size(141, 36);
+			this.HRRN.TabIndex = 1;
+			this.HRRN.Text = "HRRN";
+			this.HRRN.UseVisualStyleBackColor = true;
+			this.HRRN.Click += new System.EventHandler(this.HRRN_Click);
+			// 
+			// ShortestRemainingTime
+			// 
+			this.ShortestRemainingTime.Location = new System.Drawing.Point(147, 42);
+			this.ShortestRemainingTime.Name = "ShortestRemainingTime";
+			this.ShortestRemainingTime.Size = new System.Drawing.Size(141, 36);
+			this.ShortestRemainingTime.TabIndex = 1;
+			this.ShortestRemainingTime.Text = "Shortest remaining time";
+			this.ShortestRemainingTime.UseVisualStyleBackColor = true;
+			// 
+			// RoundRobin
+			// 
+			this.RoundRobin.Location = new System.Drawing.Point(0, 42);
+			this.RoundRobin.Name = "RoundRobin";
+			this.RoundRobin.Size = new System.Drawing.Size(141, 36);
+			this.RoundRobin.TabIndex = 1;
+			this.RoundRobin.Text = "Round Robin";
+			this.RoundRobin.UseVisualStyleBackColor = true;
+			// 
+			// ShortestJobFirst
+			// 
+			this.ShortestJobFirst.Location = new System.Drawing.Point(147, 0);
+			this.ShortestJobFirst.Name = "ShortestJobFirst";
+			this.ShortestJobFirst.Size = new System.Drawing.Size(141, 36);
+			this.ShortestJobFirst.TabIndex = 1;
+			this.ShortestJobFirst.Text = "Shortest Job First";
+			this.ShortestJobFirst.UseVisualStyleBackColor = true;
+			// 
 			// Form1
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.AutoSize = true;
 			this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-			this.ClientSize = new System.Drawing.Size(460, 435);
+			this.ClientSize = new System.Drawing.Size(460, 495);
 			this.Controls.Add(this.Alghoritms);
 			this.Controls.Add(this.Diagramm);
 			this.Controls.Add(this.debug);
@@ -549,14 +549,14 @@
 		private System.Windows.Forms.Label label3;
 		private System.Windows.Forms.Label label4;
 		private System.Windows.Forms.Button FCFS;
-		private System.Windows.Forms.Button RoundRobin;
-		private System.Windows.Forms.Button ShortestJobFirst;
 		private System.Windows.Forms.Button PriorityPlaninig;
-		private System.Windows.Forms.Button ShortestRemainingTime;
-		private System.Windows.Forms.Button HRRN;
 		private System.Windows.Forms.Label debug;
 		private System.Windows.Forms.PictureBox Diagramm;
 		private System.Windows.Forms.Panel Alghoritms;
+		private System.Windows.Forms.Button HRRN;
+		private System.Windows.Forms.Button ShortestJobFirst;
+		private System.Windows.Forms.Button RoundRobin;
+		private System.Windows.Forms.Button ShortestRemainingTime;
 	}
 }
 

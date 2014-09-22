@@ -134,8 +134,6 @@ namespace TVP.lab1.var5
 				{
 					if (stack[i].tacts_to_ready <= 0 && stack[i].end_work_tact == 0)
 						readyProccess.Add(stack[i]);
-					else
-						stack[i].tacts_to_ready--;
 				}
 
 				if (readyProccess.Count > 1)
@@ -144,6 +142,10 @@ namespace TVP.lab1.var5
 				else if (readyProccess.Count == 0)
 				{
 					tact++;
+					for (int i = 0; i < stack.Count; i++)
+					{
+						stack[i].tacts_to_ready--;
+					}
 					continue;
 				}
 
@@ -185,8 +187,6 @@ namespace TVP.lab1.var5
 				{
 					if (stack[i].tacts_to_ready <= 0 && stack[i].end_work_tact == 0)
 						readyProccess.Add(stack[i]);
-					else
-						stack[i].tacts_to_ready--;
 				}
 
 				if (readyProccess.Count > 1)
@@ -201,6 +201,8 @@ namespace TVP.lab1.var5
 				else if (readyProccess.Count == 0)
 				{
 					tact++;
+					for (int i = 0; i < stack.Count; i++)
+						stack[i].tacts_to_ready--;
 					continue;
 				}
 

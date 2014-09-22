@@ -15,6 +15,16 @@ namespace TVP.lab1.var5
 	{
 
 		List<Proccess> stack = new List<Proccess>();
+		Color activeColor = Color.GreenYellow;
+		Color defColor = SystemColors.Control;
+
+		private void noActive()
+		{
+			foreach (Control Button in Controls["Alghoritms"].Controls)
+			{
+				Button.BackColor = defColor;
+			}
+		}
 
 		public Form1()
 		{
@@ -55,6 +65,9 @@ namespace TVP.lab1.var5
 		{
 			if (!CreateProccess())
 				return;
+
+			noActive();
+			FCFS.BackColor = activeColor;
 
 			stack.Sort(
 					delegate(Proccess P1, Proccess P2)
@@ -109,6 +122,9 @@ namespace TVP.lab1.var5
 			if (!CreateProccess())
 				return;
 
+			noActive();
+			PriorityPlaninig.BackColor = activeColor;
+
 			int tact;
 			List<Proccess> readyProccess = new List<Proccess>();
 			int count_ready_proccess = 0;
@@ -156,6 +172,9 @@ namespace TVP.lab1.var5
 		{
 			if (!CreateProccess())
 				return;
+
+			noActive();
+			HRRN.BackColor = activeColor;
 
 			int tact;
 			List<Proccess> readyProccess = new List<Proccess>();
@@ -253,21 +272,21 @@ namespace TVP.lab1.var5
 
 			float sum_time_work = 0;
 			float sum_time_wait = 0;
+			string hr =		"+------+-------+-------+------+-----+\n";
+			debug.Text += hr;
+			debug.Text +=	"| Proc | Ready | Start | Work | End |\n";
+			debug.Text += hr;
 			foreach (Proccess P in stack)
 			{
 				debug.Text  +=
-					String.Format("Процесс \"{0,1}\" был готов на {1,2} такте. Начал выполнятся на {2,2} такте,выпонялся {3,2} тактов и закончил на {4,2} такте\n",
+					String.Format("| \"{0,1}\"  |  {1,2}   |  {2,2}   |  {3,2}  | {4,2}  |\n",
 									P.name, P.start_ready_tact, P.start_work_tact, (P.end_work_tact - P.start_work_tact), P.end_work_tact);
-				
-				/*debug.Text += "имя=" + P.name + "\t | готов=" + P.start_ready_tact +
-								"\t | начало выполнения:" + P.start_work_tact +
-								"\t | исполняется: " + (P.end_work_tact - P.start_work_tact) +
-								"\t | конец выполнения:" + P.end_work_tact + "\n";*/
 				sum_time_work += P.end_work_tact - P.start_work_tact;
 				sum_time_wait += P.tacts_of_wait;
 			}
-			debug.Text += "\n среднее время выполнения = " + (sum_time_work / stack.Count) +
-							"\n среднее время ожидания = " + (sum_time_wait / stack.Count);
+			debug.Text += hr;
+			debug.Text +=	"\n среднее время выполнения = " + (sum_time_work / stack.Count) +
+							"\n среднее время   ожидания = " + (sum_time_wait / stack.Count);
 		}
 
 		

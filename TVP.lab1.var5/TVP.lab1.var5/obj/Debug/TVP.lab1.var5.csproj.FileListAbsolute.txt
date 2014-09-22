@@ -7,3 +7,6 @@ c:\users\иван\documents\visual studio 2012\Projects\TVP.lab1.var5\TVP.lab1.v
 c:\users\иван\documents\visual studio 2012\Projects\TVP.lab1.var5\TVP.lab1.var5\obj\Debug\TVP.lab1.var5.csproj.GenerateResource.Cache
 c:\users\иван\documents\visual studio 2012\Projects\TVP.lab1.var5\TVP.lab1.var5\obj\Debug\TVP.lab1.var5.exe
 c:\users\иван\documents\visual studio 2012\Projects\TVP.lab1.var5\TVP.lab1.var5\obj\Debug\TVP.lab1.var5.pdb
+C:\Users\Иван\Documents\GitHub\TVP.lab1\TVP.lab1.var5\TVP.lab1.var5\bin\Debug\TVP.lab1.var5.exe.config
+C:\Users\Иван\Documents\GitHub\TVP.lab1\TVP.lab1.var5\TVP.lab1.var5\obj\Debug\TVP.lab1.var5.exe
+C:\Users\Иван\Documents\GitHub\TVP.lab1\TVP.lab1.var5\TVP.lab1.var5\obj\Debug\TVP.lab1.var5.pdb
